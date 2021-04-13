@@ -1,0 +1,32 @@
+<div class="card" >
+    <div class="card-body" >
+        <h5 class="card-title">Calcular el Promedio de Notas</h5>
+
+        <form>
+            <div class="mb-3">
+                <label>Nota 1</label>
+                <input type="number" class="form-control" [(ngModel)]="nota1" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label>Nota 2</label>
+                <input type="number" class="form-control" [(ngModel)]="nota2" [ngModelOptions]="{standalone: true}">
+            </div>
+        
+            <div class="mb-3">
+                <label>Nota 3</label>
+                <input type="number" class="form-control" [(ngModel)]="nota3" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label>Nota 4</label>
+                <input type="number" class="form-control" [(ngModel)]="nota4" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div>
+                <button class="btn btn-primary" (click)="calcularPromedio()" >Calcular Promedio</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="card-footer" >
+        Su promedio de notas es : <span [style.color]="color" >{{promedio}}</span>
+    </div>
+</div>
